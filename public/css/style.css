@@ -1,0 +1,265 @@
+body{
+    background-color: rgb(88, 85, 85);
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+ 
+}
+
+.cabecalho{
+   width: 300px;
+   display: flex;
+   justify-content: space-between;
+
+} 
+
+.link1{
+    color: #ffffff;
+    text-decoration: none;
+;
+
+}
+.hero{
+    background-image: url("../imgs/imagem02.jpg");
+  background-repeat:no-repeat;
+  background-size: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+ justify-content:center;
+ flex: 1;
+padding-left: 20px;
+}
+.hero-h1{
+    margin: 0%;
+ font-size: 50px;
+    
+
+}
+
+.telaPerfil{
+    background-image:url("../imgs/imagemSamara.jpg") ;
+    flex: 1;
+    background-repeat:no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.FotoPerfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+
+
+}
+.FotoUsuario{
+   width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+   
+}
+.nome-perfil{
+    color: red;
+    font-size: 32px;
+    margin-top: 15px;
+    font-weight: bold;
+    text-shadow: 
+        0 0 5px red,
+        0 0 10px black,
+        0 0 15px black;
+}
+ .btn-filmes{
+    margin-top: 25px;
+    padding: 15px 35px;
+    font-size: 18px;
+
+    background-color: black;
+    color: red;
+
+    border: 2px solid red;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-filmes:hover{
+    background-color: red;
+    color: white;
+    transform: scale(1.05);
+}
+    
+.sessao{
+    background-color: rgb(28, 46, 129);
+    width: 70vh;
+    border-radius: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.filmes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    color: red;
+    margin-top: 40px;
+    text-shadow: 5px 5px 8px black;
+    font-size: 50px;
+ 
+}
+p{
+    font-size: 30px;
+}
+.btn-assistir{
+    margin-top:20px;
+    padding:12px 30px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    background-color:red;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    width:220px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card{
+    background-color: #1c1c1c;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.card h2{
+    margin: 10px 0;
+}
+
+.card p{
+    color: #ccc;
+}
+
+button{
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #b30000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: red;
+}
+
+.voltar{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.voltar a{
+    background-color: #b30000;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+  
+}
+
+.container-noticias{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.noticia{
+    background-color: #1c1c1c;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.noticia h2{
+    color: red;
+    font-size: 18px;
+}
+
+.noticia p{
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.noticia button{
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #b30000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.noticia button:hover{
+    background-color: red;
+}
+.titulo{
+    color: red;
+    text-shadow: 5px 5px 8px black;
+    text-align: center;
+    margin-top: 40px;
+}
+th{
+    border:  1px solid black;
+    background-color: #2a2a2a;
+    margin: 10px;
+    
+
+}
+td{
+border:  1px solid black;
+ background-color: #2a2a2a;
+}
+table{
+    width: 50%;
+    height: 300px;
+   color: red;
+   border-spacing: 10px 5px;
+
+}
