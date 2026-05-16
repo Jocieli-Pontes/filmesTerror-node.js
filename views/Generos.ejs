@@ -1,0 +1,47 @@
+ <%-include('partials/header.ejs')%>
+
+ <form action="/Generos/Cadastrar" method="post">
+    <label>Escolha seu Genero:</label>
+    <input type="text" name="nome" required placeholder="Insira o genero do filme...">
+    <button type="submit">
+        Inserir
+    </button>
+ </form>
+
+ <div>
+        <h1 class="filmes">
+          ❤️ Meus Genêros favoritos!
+        </h1>
+    
+<div class="container-noticias">
+        <table>
+            <th>
+                Nome:
+            </th>
+            <th>
+                Ações:
+            </th>
+            
+            <% consulta.forEach((titulo)=> {%>
+               <tr>
+                    <td>
+                        <%= titulo.titulo %>
+                    </td>
+                    <td>
+                        <a href="/Genero/Excluir/<%=titulo.id%>"> <button>Excluir</button></a>
+                        <a href="/Genero/Alterar/<%=titulo.id%>"> <button>Alterar</button></a>
+                    </td>
+                </tr>
+            <%}) %>
+
+             
+
+        </table>
+
+</div>
+
+<div class="voltar">
+    <a href="/">Voltar para o catálogo</a>
+</div>
+</body>
+</html>
