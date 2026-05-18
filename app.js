@@ -1,5 +1,6 @@
 import express  from "express";
 import SequelizeConnection from "./config/Sequelize-config.js";
+import association from "./config/associations.js";
 
 const app = express();
 
@@ -20,6 +21,7 @@ SequelizeConnection.query("create database if not exists FilmesTerror").then(()=
 }).catch((erro)=>{
     console.log(erro)
 })
+association()
 
 import FavoritosController from "./controller/FavoritosController.js";
 import NoticiasController from "./controller/NoticiasController.js";

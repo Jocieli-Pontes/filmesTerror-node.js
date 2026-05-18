@@ -1,4 +1,18 @@
  <%-include('partials/header.ejs')%>
+ <form action="/Favoritos/Cadastrar" method="post">
+    <label>Escolha seu Genero:</label>
+    <input type="text" name="titulo" required placeholder="Insira o titulo do filme...">
+    <input type="text" name="Duracao" required placeholder="Insira a duração do filme...">
+    <select name="generoid" id="">
+        <%genero.forEach(gen =>{ %>
+            <option value="<%= gen.id%>"> <%= gen.titulo %></option>
+         <%})%>   
+
+    </select>
+    <button type="submit">
+        Inserir
+    </button>
+ </form>
     <div>
         <h1 class="filmes">
           ❤️ Meus Filmes Favoritos de Terror!
@@ -15,14 +29,27 @@
             <th>
                 Genêro
             </th>
-            <%favorito.forEach((favoritos)=>{%>
-            <tr>
-                <td><%=favoritos.titulo%></td>
-                <td><%=favoritos.duracao%></td>
-                <td><%=favoritos.genero%></td>
-                
-            </tr>
-       <% }) %>
+            <th>
+                Ações
+            </th>
+           <% favoritos.forEach((Favorito)=> {%>
+               <tr>
+                    <td>
+                        <%= Favorito.titulo %>
+                    </td>
+                    <td>
+                        <%= Favorito.duracao %>
+                    </td>
+                    <td>
+                        <%= Favorito.genero.titulo %>
+                    </td>
+                    <td>
+                        <a href="/Genero/Excluir/<%=Favorito.id%>"> <button>Excluir</button></a>
+                        <a href="/Genero/Alterar/<%=Favorito.id%>"> <button>Alterar</button></a>
+                    </td>
+                </tr>
+            <%}) %>
+
 
         </table>
 
