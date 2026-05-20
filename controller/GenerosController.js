@@ -27,7 +27,7 @@ router.post("/Generos/Cadastrar", function(req,res){
     
 })
 
-router.get("/Genero/Excluir/:id", function(req, res){
+router.get("/Generos/Excluir/:id", function(req, res){
     const id = req.params.id
     Genero.destroy({
         where: {
@@ -40,8 +40,9 @@ router.get("/Genero/Excluir/:id", function(req, res){
     })
 })
 
-router.get("/Genero/Alterar/:id", function(req, res){
-    const id = req.params.id
+router.get("/Generos/Alterar/:id", function(req, res){
+    const id = req.params.id;
+        console.log("ID recebido:", req.params.id);
     Genero.findByPk(id).then((consulta)=>{
         res.render("alterar-genero",{
             alterar: consulta
@@ -52,14 +53,15 @@ router.get("/Genero/Alterar/:id", function(req, res){
 })
 
 router.post("/Generos/Alterar", function(req, res){
-    const id = req.body.id
-    const titulo = req.body.nome
+    const id = req.body.id;
+    console.log("ID recebido:", req.params.id);
+    const titulo = req.body.nome;
     Genero.update({
         titulo: titulo
     },
     {
         where:{
-            id
+            id: id
         }
     }
 ).then(()=>{
@@ -68,7 +70,6 @@ router.post("/Generos/Alterar", function(req, res){
     console.log(erro)
 
 })
-
 })
 
 export default router;
