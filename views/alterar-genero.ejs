@@ -1,21 +1,22 @@
  <%-include('partials/header.ejs')%>
-  <h1 class="filmes">
-    ❤️ Meus Genêros favoritos!
-  </h1>
-    
-<div class="container-noticias">
-  <form action="/Generos/Alterar" method="post">
-    <input type="hidden" name="id" value="<%=alterar.id%>">
-    <label>Escolha seu Genero:</label>
-    <input type="text" name="nome" required placeholder="Insira o genero do filme..." value="<%= alterar.titulo%>">
-    <button type="submit">
-        Inserir
-    </button>
-  </form>
+ <br>
 
-
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1> Alterar Genero</h1>
+        </div>
+        <div class="card-body">
+            <form action="/Generos/Alterar" method="POST">
+                    <input type="hidden" name="id" value="<%=alterar.id%>">
+                <label>Escolha seu Genero:</label>
+                <input type="text" name="nome" required placeholder="Insira o genero do filme..."  class="form-control" value="<%= alterar.titulo%>">
+                <button type="submit" class="btn btn-success"> Alterar </button>
+                <button type="reset" class="btn btn-danger"> Limpar</button>
+            </form>
+        </div>
+    </div>
 </div>
-
 <div class="voltar">
     <a href="/">Voltar para o catálogo</a>
 </div>
